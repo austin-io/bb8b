@@ -5,6 +5,28 @@ bb8b::bb8b(){
         addr = 0x00;
     }
     
+    this->m_Ram = {
+        0x01, 0x1F,
+        0x02, 0x1E,
+        0x07, 0x03,
+        0x0D, 0x0A,
+        0x0F, 0x04,
+        
+        0x00, 0x00, 
+        0x00, 0x00, 
+        0x00, 0x00, 
+        0x00, 0x00, 
+        0x00, 0x00, 
+        0x00, 0x00, 
+        0x00, 0x00, 
+        0x00, 0x00, 
+        0x00, 0x00, 
+        0x00, 0x00, 
+        
+        0x05, 0x10 
+    };
+    
+    /*
     this->m_Ram[0] = 0x01; // 0: LDA 31
     this->m_Ram[1] = 0x1F;
 
@@ -22,7 +44,7 @@ bb8b::bb8b(){
 
     this->m_Ram[30] = 0x05; // 30: 5
     this->m_Ram[31] = 0x10; // 31: 16
-
+    */
 
     this->m_Instructions.push_back(
             Instruction("HLT", 0x00, this, [](bb8b* cpu){} ));
